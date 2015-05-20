@@ -1,0 +1,19 @@
+<div class="container">
+	<ul class="row playingCards simpleCards cardsList">
+		<li ng-repeat="deal in deals" class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+			<a href="/deal/{{deal._id}}" class="card">
+				<span class="centered">
+					<p>Score: {{deal.score | percentage:2}}</p>
+					<p>Date: {{deal.created | date:'MM/dd/yyyy'}}</p>
+				</span>
+			</a>
+		</li>
+		<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+			<a href="#" ng-click="loadDeals(page)" class="card">
+				<span class="centered">
+					LOAD MORE
+				</span>
+			</a>
+		</li>
+	</ul>
+</div>

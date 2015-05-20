@@ -1,0 +1,14 @@
+<div class="centered">
+	<h1>SCORE: {{info.score | percentage:2}}, AVG: {{info.average | percentage:2}}</h1>
+	<table class="playingCards simpleCards">
+		<tr ng-repeat="i in range(0, 3)">
+			<td ng-repeat="j in range(0, 12)">
+				<span class="card" ng-class="[calculateRightPos(i, j), calculateSuit(i*13 + j), 'rank-' + calculateValue(i*13 + j)]">
+			        <span class="rank">{{calculateValue(i*13 + j)}}</span>
+			        <span class="suit" ng-bind-html="('&' + calculateSuit(i*13 + j) + ';') | to_trusted"></span>
+			    </span>
+			</td>
+		</tr>
+	</table>
+	<a ng-href="/" class="btn btn-primary btn-lg btn-block">Deal again!</a>
+</div>

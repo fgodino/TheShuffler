@@ -1,0 +1,74 @@
+
+body {
+	padding-top: 100px;
+	background-color: whitesmoke;
+}
+
+.centered{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%) 
+}
+
+.deck-back {
+	height: 200px;
+	width: auto;
+	z-index: 999; 
+}
+
+.rightPos {
+	-moz-box-shadow: .2em .2em .5em red!important;
+	-webkit-box-shadow: .2em .2em .5em red!important;
+	box-shadow: .2em .2em .5em red!important;
+}
+
+.rightCol {
+	-moz-box-shadow: .2em .2em .5em blue!important;
+	-webkit-box-shadow: .2em .2em .5em blue!important;
+	box-shadow: .2em .2em .5em blue!important;
+}
+
+.rightRow {
+	-moz-box-shadow: .2em .2em .5em green!important;
+	-webkit-box-shadow: .2em .2em .5em green!important;
+	box-shadow: .2em .2em .5em green!important;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@keyframes pulse {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+		transform: scale3d(1.05, 1.05, 1.05);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+.pulse {
+	animation-name: pulse;
+}
+
+ul {         
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+}
+ul li {     
+	list-style:none;
+	margin-bottom:25px;           
+}
+ul li img {
+	cursor: pointer;
+}
+
+.cardsList .card{
+	width: 100%;
+	height: 150px;
+}
